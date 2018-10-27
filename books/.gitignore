@@ -16,5 +16,13 @@ storage/*.key
 Homestead.yaml
 Homestead.json
 
-# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
-.rocketeer/
+# Visual Studio
+/.idea
+/.vscode
+/.vagrant
+
+# Yarn
+yarn-error.log
+
+# PHP Unit Result
+.phpunit.result.cache

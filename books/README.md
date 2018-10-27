@@ -33,7 +33,7 @@ npm install
 ### Configuration
 Set environment (env) file:
 ```
-cp env .env
+cp .env.example .env
 ```
 Generate application key:
 ```
