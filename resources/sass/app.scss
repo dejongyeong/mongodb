@@ -1,4 +1,3 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -8,7 +7,57 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+a, a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  font-family: 'Ruda', sans-serif;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 13px;
+}
+
+.wrapper {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 0 15px 15px 15px;
+  width: 100%;
+}
+
+.app-min-height {
+  min-height: 900px;
+}
+
+nav {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  .navbar-brand { 
+    padding-left: 40px;
+  }
+
+  .nav-item {
+    margin-left: 20px;
+  }
+}
+
+// Footer
+.app-footer {
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 10%;
+  font-size: 11px;
+  background: $footer-color;
+  font-family: $font-family-segoe;
+  
+  a {color: #fff;}
+
+  a:hover { color: $link-hover-color; }
 }
