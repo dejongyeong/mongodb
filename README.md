@@ -15,6 +15,15 @@ Programming Language and APIs used for implementation:
 IDE used for implementation
 * Microsoft Visual Studio Code.
 
+## Pre-requisite
+1. Install [MongoDB Driver](https://pecl.php.net/package/mongodb/1.5.3/windows) for PHP.<br>
+2. Extract DLL zip file and extract inside PHP's <i>ext</i> directory.<br>
+3. Add the following command in PHP Configuration file (php.ini)
+```
+extension=php_mongodb.dll
+```
+
+
 ## Installation
 
 Clone Repository
