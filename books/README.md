@@ -41,7 +41,28 @@ php artisan key:generate
 ```
 Create database and add database settings to .env file.
 
-### Style Build
+### Live Preview
+Starting Laravel server
 ```
-gulp
+php artisan serve
+```
+
+### Watching Assets for Changes
+Webpack automatically recompile assets when detects a change.
+```
+npm run watch
+```
+Certain environments Webpack is not updating
+```
+npm run watch-poll
+```
+
+### Running Mix
+Run all Mix tasks
+```
+npm run dev
+```
+Run all Mix tasks and minify output
+```
+npm run production
 ```
