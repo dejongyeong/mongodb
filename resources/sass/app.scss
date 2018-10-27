@@ -25,34 +25,25 @@ body {
   font-size: 13px;
 }
 
-.wrapper {
-  display: inline-block;
-  margin-top: 40px;
+.wrapper {  
+  margin: 40px auto 10px auto;
   padding: 0 15px 15px 15px;
-  width: 100%;
+  width: 95%;
 }
 
 .app-min-height {
   min-height: 900px;
 }
 
-nav {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-  .navbar-brand { 
-    padding-left: 40px;
-  }
-
-  .nav-item {
-    margin-left: 20px;
-  }
+nav .nav-item {
+    margin-right: 5px;
 }
 
 // Footer
 .app-footer {
   color: #fff;
   padding: 10px 0;
-  margin-top: 10%;
+  margin-top: 4%;
   font-size: 11px;
   background: $footer-color;
   font-family: $font-family-segoe;
