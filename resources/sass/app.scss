@@ -1,5 +1,6 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,600');
+@import url('https://fonts.googleapis.com/css?family=Ruda');
 
 // Variables
 @import 'variables';
@@ -23,6 +24,10 @@ body {
   padding: 0px !important;
   margin: 0px !important;
   font-size: 13px;
+
+  h2 {
+    font-family: 'Nunito', sans-serif;
+  }
 }
 
 .wrapper {  
@@ -36,7 +41,11 @@ body {
 }
 
 nav .nav-item {
-    margin-right: 5px;
+  margin-right: 5px;
+}
+
+.btn-size {
+  min-width: 100px;
 }
 
 // Footer
@@ -46,7 +55,6 @@ nav .nav-item {
   margin-top: 4%;
   font-size: 11px;
   background: $footer-color;
-  font-family: $font-family-segoe;
   
   a {color: #fff;}
 
