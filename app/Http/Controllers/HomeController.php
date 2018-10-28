@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
+        $books = Book::all();
+        
+        return view('site.home')->with('books', $books);
     }
 
     /**
@@ -45,7 +48,7 @@ class HomeController extends Controller
      */
     public function show()
     {
-        return view('site.home');
+        //
     }
 
     /**
