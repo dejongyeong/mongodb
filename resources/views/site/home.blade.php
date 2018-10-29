@@ -2,6 +2,16 @@
 
 {{-- Content --}}
 @section('content')
+
+    <!-- Display Session Message -->
+    @if(session()->has('success'))
+        <div class='alert alert-success alert-dismissible fade show' role='alert'>
+            {{ session()-> get('success') }}
+            <button tye='button' class='close' data-dismiss='alert' aria-label='close'>
+                <span aria-hidden='true'>&times;</span>
+            </button>
+        </div>
+    @endif
     
     <div class='row' style="border-bottom:1px solid #ccc;">
         <div class='col-sm-9 pl-0'>
@@ -41,7 +51,15 @@
                                 <td>{{ $book->publisher['year'] }}</td>
                                 <td class='text-right'>
                                     <a href="#" class="btn btn-outline-info btn-sm pull-right"> <i class="fas fa-sm fa-edit"></i> Edit</a>
-                                    <a href="#" class="btn btn-outline-danger btn-sm pull-right"> <i class="fas fa-sm fa-trash"></i> Delete</a>
+                                    
+                                    <!-- Delete -->
+                                    <form method='post' action="{!! route('book.destroy', [$book->_id]) !!} ">
+                                        {!! csrf_field() !!}
+                                        {!! method_field('DELETE') !!}
+                                        <button class="btn btn-outline-danger btn-sm pull-right" onclick="return confirm('Are you sure you want to delete this book item?')"> 
+                                            <i class="fas fa-sm fa-trash"></i> Delete
+                                        </button>
+                                    <form>
                                 </td>
                             </tr>
                         @endforeach

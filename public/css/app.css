@@ -10567,3 +10567,8 @@ table.table-striped > thead > tr > th {
   color: #fff;
 }
 
+.alert {
+  width: 100%;
+  height: auto;
+}
+

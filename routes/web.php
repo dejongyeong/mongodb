@@ -14,3 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
+
+// Delete
+Route::delete('books/{book}', ['as' => 'book.destroy', 'uses' => 'HomeController@destroy']);
+
