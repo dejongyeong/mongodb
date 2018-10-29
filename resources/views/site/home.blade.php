@@ -18,7 +18,9 @@
             <h2>Books Collection</h2>
         </div>
         <div class='col-sm-3 pull-right p-0'>
-            <button type='button' class='float-right btn btn-secondary btn-sm mt-1 btn-size'><span class="fas fa-sm fa-plus-circle"></span> &nbsp; Insert Book</button>
+            <button type='button' class='float-right btn btn-secondary btn-sm mt-1 btn-size' data-toggle='modal' data-target='#create-modal'>
+                <span class="fas fa-sm fa-plus-circle"></span> &nbsp; Insert Book
+            </button>
         </div>
     </div>
 
@@ -69,4 +71,20 @@
         @endif
     </div>
 
+@endsection
+
+<!-- Create -->
+@section('modals')
+    @include('crud.create')
+@endsection
+
+<!-- JavaScript -->
+@section('script')
+    <script type="text/javascript">
+        window.setTimeout(function() {
+            $('.alert').fadeTo(500,0).slideUp(500, function() {
+                $(this).remove();
+            });
+        }, 3000);
+    </script>
 @endsection

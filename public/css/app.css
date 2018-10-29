@@ -10572,3 +10572,7 @@ table.table-striped > thead > tr > th {
   height: auto;
 }
 
+placeholder {
+  font-size: 0.8125rem;
+}
+
