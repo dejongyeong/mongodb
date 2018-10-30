@@ -47,7 +47,7 @@
                     <tbody>
                         @foreach($books as $book)
                             <tr>
-                                <td><a href='#'>{{ $book->title }} </a></td>
+                                <td><a href='{{ route('book.show',[$book->_id]) }}'>{{ $book->title }} </a></td>
                                 <td>{{ $book->isbn }} </td>
                                 <td>{{ $book->publisher['name'] }}</td>
                                 <td>{{ $book->publisher['year'] }}</td>

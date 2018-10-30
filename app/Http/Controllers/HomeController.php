@@ -61,9 +61,11 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        //
+        $book = Book::find($id);
+
+        return view('crud.show')->with('book', $book);
     }
 
     /**
