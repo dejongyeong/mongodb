@@ -25,5 +25,8 @@ Route::post('books', ['as' => 'book.insert', 'uses' => 'HomeController@store']);
 Route::get('update/{book}', ['as' => 'book.update', 'uses' => 'HomeController@edit']);
 Route::post('update/{book}', ['as' => 'book.update', 'uses' => 'HomeController@update']);
 
-//Show
+// Read Operation
 Route::get('book/{book}', ['as' => 'book.show', 'uses' => 'HomeController@show']);
+
+// Books Collection Report
+Route::get('/report', 'HomeController@report');

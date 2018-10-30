@@ -122,4 +122,16 @@ class HomeController extends Controller
 
         return back()->with('success', "Book '$book->title' has been successfully deleted");
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function report()
+    {
+        // MapReduce function
+
+        return view('crud.report');
+    }
 }
