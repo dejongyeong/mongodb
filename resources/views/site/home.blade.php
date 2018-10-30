@@ -52,15 +52,15 @@
                                 <td>{{ $book->publisher['name'] }}</td>
                                 <td>{{ $book->publisher['year'] }}</td>
                                 <td class='text-right'>
+                                    <a href="{!! route('book.update', [$book->_id]) !!}" class="btn btn-outline-primary btn-sm pull-right"> <i class="fas fa-sm fa-edit"></i> Edit</a>
                                     <!-- Delete -->
-                                    <form method='post' id='book-form' action="{{ route('book.destroy', [$book->_id]) }}" onsubmit="return confirm('Are you sure you want to delete this book item?')">
+                                    <form method='post' id='book-form' action="{{ route('book.destroy', [$book->_id]) }}" onsubmit="return confirm('Are you sure you want to delete this book item?')" style='display:inline-block;'>
                                         @csrf
                                         <input name="_method" type="hidden" value="DELETE">
                                         <button class="btn btn-outline-danger btn-sm pull-right"> 
                                             <i class="fas fa-sm fa-trash"></i> Delete
                                         </button>
                                     </form>
-                                    <a href="#" class="btn btn-outline-info btn-sm pull-right"> <i class="fas fa-sm fa-edit"></i> Edit</a>
                                 </td>
                             </tr>
                         @endforeach

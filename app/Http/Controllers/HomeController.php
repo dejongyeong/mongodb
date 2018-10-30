@@ -44,7 +44,7 @@ class HomeController extends Controller
         $book->isbn = trim($request->isbn);
         $book->publisher = array('name' => trim($request->name), 'year' => trim($request->year), 'city' => trim($request->city));
         $book->genre = trim($request->genre);
-        $book->format = trim($request->format);
+        $book->format = $request->format;
         $book->price = trim($request->price);
         $book->page = trim($request->page);
         $book->description = trim($request->description);
@@ -74,7 +74,9 @@ class HomeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $book = Book::find($id);
+
+        return view('crud.update')->with('book', $book);
     }
 
     /**
@@ -86,7 +88,22 @@ class HomeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $book = Book::find($id);
+        
+        $book->title = trim($request->title);
+        $book->author = explode(',', trim($request->author));
+        $book->isbn = trim($request->isbn);
+        $book->publisher = array('name' => trim($request->name), 'year' => trim($request->year), 'city' => trim($request->city));
+        $book->genre = trim($request->genre);
+        $book->format = $request->format;
+        $book->price = trim($request->price);
+        $book->page = trim($request->page);
+        $book->description = trim($request->description);
+
+        $book->save();
+
+        // Redirect back to home page
+        return redirect()->to('/')->with('success', "Book has been succesfully updated");
     }
 
     /**

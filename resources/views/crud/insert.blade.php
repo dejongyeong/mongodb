@@ -78,7 +78,7 @@
                                 <!-- Format -->
                                 <div class='col-md-4 mb-3'>
                                     <label for="format">Format:</label>
-                                    <select required class='form-control'>
+                                    <select required class='form-control' name='format' id='format'>
                                         <option value=''></option>
                                         <option value='paperback'>Paperback</option>
                                         <option value='hardcover'>Hardcover</option>

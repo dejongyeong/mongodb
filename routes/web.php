@@ -21,3 +21,6 @@ Route::delete('books/{book}', ['as' => 'book.destroy', 'uses' => 'HomeController
 // Create Operation
 Route::post('books', ['as' => 'book.insert', 'uses' => 'HomeController@store']);
 
+// Update Operation
+Route::get('update/{book}', ['as' => 'book.update', 'uses' => 'HomeController@edit']);
+Route::post('update/{book}', ['as' => 'book.update', 'uses' => 'HomeController@update']);
