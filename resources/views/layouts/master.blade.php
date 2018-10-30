@@ -29,13 +29,6 @@
 
     @yield('styles')
 
-    <!-- Scripts Reference: https://laravel.com/docs/5.6/csrf -->
-    <script type='text/javascript'>
-        window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
-    </script>
-
 </head>
 <body>
     

@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        // Not applicable if using Bootstrap 4 modal.
     }
 
     /**
@@ -37,7 +37,22 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $book = new Book();
+
+        $book->title = trim($request->title);
+        $book->author = explode(',', trim($request->author));
+        $book->isbn = trim($request->isbn);
+        $book->publisher = array('name' => trim($request->name), 'year' => trim($request->year), 'city' => trim($request->city));
+        $book->genre = trim($request->genre);
+        $book->format = trim($request->format);
+        $book->price = trim($request->price);
+        $book->page = trim($request->page);
+        $book->description = trim($request->description);
+
+        $book->save();
+
+        // Redirect back to home page
+        return redirect()->to('/')->with('success', "Book has been succesfully created");
     }
 
     /**
@@ -86,6 +101,6 @@ class HomeController extends Controller
 
         $book->delete();
 
-        return redirect()->to('/')->with('success', "Book '$book->title' has been deleted");
+        return back()->with('success', "Book '$book->title' has been successfully deleted");
     }
 }

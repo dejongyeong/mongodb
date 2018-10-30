@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
-// Delete
+// Delete Operation
 Route::delete('books/{book}', ['as' => 'book.destroy', 'uses' => 'HomeController@destroy']);
+
+// Create Operation
+Route::post('books', ['as' => 'book.insert', 'uses' => 'HomeController@store']);
 
