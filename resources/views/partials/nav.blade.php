@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link @if(Request::is('/')) active @endif" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link @if(Request::is('/report')) active @endif" href="{{ url('/report') }}">Report </a>
+                <a class="nav-item nav-link @if(! Request::is('/')) active @endif" href="{{ url('/report') }}">Report <span class="sr-only">(current)</span> </a>
             </div>
         </div>
     </nav>

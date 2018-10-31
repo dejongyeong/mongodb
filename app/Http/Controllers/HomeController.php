@@ -130,8 +130,11 @@ class HomeController extends Controller
      */
     public function report()
     {
-        // MapReduce function
+        $books = Book::all();
 
-        return view('crud.report');
+        // MapReduce: Total Price of all books in MongoDB.
+        $total = Book::get(['price'])->sum('price');
+
+        return view('crud.report')->with('books',$books)->with('total', $total);
     }
 }
