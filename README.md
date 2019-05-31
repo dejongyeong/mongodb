@@ -1,7 +1,8 @@
 # MongoDB
 
-MongoDB Portfolio for Advanced Database Programming in IT Tralee.<br>
-<i>Aim of this portfolio is to show the study outcome for performing MongoDB CRUD operation and MapReduce with the use of selected APIs from UI.</i>
+<b>IT Tralee Year 4 Semester 1</b>
+
+MongoDB Portfolio for Advanced Database Programming in IT Tralee. Aim of this portfolio is to show the study outcome for performing MongoDB CRUD operation and MapReduce with the use of selected APIs from UI.
 
 Implementation is related to big data where book details is stored in MongoDB.
 
